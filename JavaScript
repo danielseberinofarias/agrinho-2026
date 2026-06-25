@@ -1,0 +1,27 @@
+
+```javascript
+// Aguarda o carregamento do HTML
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Selecionando os elementos
+    const formulario = document.querySelector('#meuFormulario');
+    const inputNome = document.querySelector('#nome');
+    const mensagemFeedback = document.querySelector('#feedback');
+
+    // 2. Definindo a ação (o que acontece ao enviar)
+    formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault(); // Impede que a página recarregue
+
+        const valorNome = inputNome.value;
+
+        // Validação simples
+        if (valorNome.length < 3) {
+            mensagemFeedback.textContent = "Por favor, digite um nome válido.";
+            mensagemFeedback.style.color = "red";
+        } else {
+            mensagemFeedback.textContent = "Sucesso! Dados enviados.";
+            mensagemFeedback.style.color = "green";
+            formulario.reset(); // Limpa o formulário
+        }
+    });
+});
