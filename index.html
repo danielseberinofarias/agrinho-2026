@@ -1,0 +1,228 @@
+    body {
+        background-color: #f4f7f5;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Cabeçalho e Navegação */
+    header {
+        background-color: #1b4332;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #52b788;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 2rem;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #52b788;
+    }
+
+    /* Banner Principal (Hero) */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1470') no-repeat center center/cover;
+        height: 70vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        max-width: 800px;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        background-color: #52b788;
+        color: #1b4332;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #74c69d;
+        transform: translateY(-2px);
+    }
+
+    /* Seções Gerais */
+    section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1b4332;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #52b788;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Sobre / O Equilíbrio */
+    .sobre-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .sobre-img img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Pilares / Destaques */
+    .pilares {
+        background-color: #e9f5ed;
+        max-width: 100%;
+    }
+
+    .grid-pilares {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .pilar-card {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .pilar-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pilar-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .pilar-card h3 {
+        color: #2d6a4f;
+        margin-bottom: 1rem;
+    }
+
+    /* Contato */
+    .contato-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1b4332;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+        outline: none;
+        border-color: #52b788;
+    }
+
+    /* Rodapé */
+    footer {
+        background-color: #1b4332;
+        color: #ffffff;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .nav-container {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .sobre-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
