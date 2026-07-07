@@ -3,59 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável | AGRINHO 2026</title>
-    
-    <!-- CSS Externo -->
+    <title>Agro Forte • Futuro Sustentável | AGRINHO 2026</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Equilíbrio entre Produção e Meio Ambiente</p>
-        <h2>AGRINHO 2026</h2>
+        <nav class="navbar">
+            <div class="logo">
+                <span>AGRINHO</span> 2026
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#iniciativas">Iniciativas</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+                Participar
+            </button>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Agro Forte,<br>Futuro Sustentável</h1>
+                <p class="hero-subtitle">Tecnologia, Natureza e Inovação em Harmonia</p>
+                <button class="btn-hero" onclick="document.getElementById('iniciativas').scrollIntoView({behavior:'smooth'})">
+                    Conheça o Projeto
+                </button>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#iniciativas">Iniciativas</a></li>
-            <li><a href="#impacto">Impacto</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero">
-        <h2>Cultivando o Amanhã</h2>
-    </div>
-
     <main>
-        <section id="sobre">
-            <h2>Sobre o Projeto</h2>
-            <p>O AGRINHO 2026 é uma iniciativa inovadora que busca harmonizar a produção agropecuária com a preservação ambiental, garantindo um futuro sustentável para as próximas gerações.</p>
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2>Sobre o Projeto</h2>
+                <p class="lead">Uma iniciativa pioneira que une alta produtividade agrícola com preservação ambiental, preparando o Brasil para liderar a agroecologia do futuro.</p>
+            </div>
         </section>
 
-        <section id="iniciativas">
-            <h2>Nossas Iniciativas</h2>
-            <ul>
-                <li>✅ Agricultura de precisão e uso sustentável de recursos</li>
-                <li>✅ Recuperação de áreas degradadas</li>
-                <li>✅ Incentivo à agroecologia e biodiversidade</li>
-                <li>✅ Educação ambiental no campo</li>
-            </ul>
+        <section id="iniciativas" class="section">
+            <div class="container">
+                <h2>Nossas Iniciativas</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>🌱 Agricultura de Precisão</h3>
+                        <p>Uso inteligente de tecnologia e dados para otimizar recursos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🌳 Recuperação de Áreas</h3>
+                        <p>Restaurando solos degradados com técnicas inovadoras.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🐝 Biodiversidade</h3>
+                        <p>Promoção da agroecologia e preservação da vida silvestre.</p>
+                    </div>
+                    <div class="card">
+                        <h3>📚 Educação no Campo</h3>
+                        <p>Formando jovens e produtores conscientes.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="impacto">
-            <h2>Impacto Esperado</h2>
-            <p>Redução significativa da emissão de carbono, aumento da produtividade sustentável e fortalecimento das comunidades rurais.</p>
+        <section id="impacto" class="section impact">
+            <div class="container">
+                <h2>Impacto Esperado</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>-45%</h3>
+                        <p>Emissão de Carbono</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>+38%</h3>
+                        <p>Produtividade Sustentável</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>12k</h3>
+                        <p>Famílias Impactadas</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 AGRINHO - Agro Forte, Futuro Sustentável</p>
+    <footer id="contato">
+        <div class="container">
+            <p>&copy; 2026 AGRINHO - Agro Forte, Futuro Sustentável</p>
+        </div>
     </footer>
 
-    <!-- JavaScript Externo -->
     <script src="script.js"></script>
 </body>
 </html>
